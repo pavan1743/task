@@ -1,0 +1,24 @@
+import cv2
+pic=cv2.imread("chris.jpg")
+pic=cv2.resize(pic,(500,500))
+cv2.imshow("part1",pic)
+if cv2.waitKey()==13:
+     pass
+cv2.destroyAllWindows()
+
+pic1=cv2.imread("hames.jpg")
+pic1=cv2.resize(pic1,(500,500))
+pic1part=pic1[110:340,100:380,:]
+print(pic1.shape)
+print(pic1part.shape)
+cv2.imshow("part2",pic1part)
+
+if cv2.waitKey()==13:
+     pass
+cv2.destroyAllWindows()
+
+pic[70:300,100:380,:]=pic1part[:,:,:]
+cv2.imshow("hi",pic)
+if cv2.waitKey()==13:
+     pass
+cv2.destroyAllWindows()
