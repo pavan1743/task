@@ -1,0 +1,11 @@
+import cv2
+import numpy 
+pic=cv2.imread("chris.jpg")
+pic=cv2.resize(pic,(500,500))
+pic1=cv2.imread("hames.jpg")
+pic1=cv2.resize(pic1,(500,500))
+photo=numpy.hstack((pic, pic1))
+cv2.imshow("hello",photo)
+if cv2.waitKey()==13:
+     pass
+cv2.destroyAllWindows()
